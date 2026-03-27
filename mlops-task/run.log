@@ -1,0 +1,17 @@
+[2026-03-28T02:50:45] [INFO    ] [mlops-pipeline] ============================================================
+[2026-03-28T02:50:45] [INFO    ] [mlops-pipeline] Pipeline started
+[2026-03-28T02:50:45] [INFO    ] [mlops-pipeline] ============================================================
+[2026-03-28T02:50:45] [INFO    ] [mlops-pipeline] Loading config from: config.yaml
+[2026-03-28T02:50:45] [INFO    ] [mlops-pipeline] Config loaded — version=v1, seed=42, window=5
+[2026-03-28T02:50:45] [INFO    ] [mlops-pipeline] Random seed set to 42
+[2026-03-28T02:50:45] [INFO    ] [mlops-pipeline] Loading data from: data.csv
+[2026-03-28T02:50:45] [INFO    ] [mlops-pipeline] Data loaded — 10000 rows, 7 columns
+[2026-03-28T02:50:45] [INFO    ] [mlops-pipeline] Computing rolling mean (window=5)
+[2026-03-28T02:50:45] [INFO    ] [mlops-pipeline] Rolling mean computed
+[2026-03-28T02:50:45] [INFO    ] [mlops-pipeline] Generating trading signals
+[2026-03-28T02:50:45] [INFO    ] [mlops-pipeline] Signals generated — 4989/9996 rows signalled BUY
+[2026-03-28T02:50:45] [INFO    ] [mlops-pipeline] Computing metrics
+[2026-03-28T02:50:45] [INFO    ] [mlops-pipeline] Metrics saved to: metrics.json
+[2026-03-28T02:50:45] [INFO    ] [mlops-pipeline] ============================================================
+[2026-03-28T02:50:45] [INFO    ] [mlops-pipeline] Pipeline completed successfully
+[2026-03-28T02:50:45] [INFO    ] [mlops-pipeline] ============================================================
