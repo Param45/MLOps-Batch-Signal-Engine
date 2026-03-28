@@ -7,22 +7,25 @@ A production-quality, Dockerized MLOps batch pipeline that processes BTC trading
 ## Architecture
 
 ```
-mlops-task/
+project-root/
 │
-├── run.py                 # CLI entry point — orchestrates the pipeline
-├── config.yaml            # Pipeline configuration (seed, window, version)
-├── data.csv               # Input dataset (BTC 1-min OHLCV candles)
-├── requirements.txt       # Python dependencies
-├── Dockerfile             # One-command containerized deployment
-├── README.md              # This file
-├── metrics.json           # Output — structured pipeline metrics
-├── run.log                # Output — structured pipeline logs
-└── utils/
-    ├── __init__.py        # Package init + custom exceptions
-    ├── config_loader.py   # YAML config loading & schema validation
-    ├── data_loader.py     # CSV ingestion & validation
-    ├── processor.py       # Rolling mean, signal generation, metrics
-    └── logger.py          # Structured logging setup
+├── data.csv                # Input dataset (BTC 1-min OHLCV candles)
+│
+└── mlops-task/
+    ├── run.py              # CLI entry point — orchestrates the pipeline
+    ├── config.yaml         # Pipeline configuration (seed, window, version, paths)
+    ├── requirements.txt    # Python dependencies
+    ├── Dockerfile          # Containerized deployment setup
+    ├── README.md           # Project documentation
+    ├── metrics.json        # Output — structured pipeline metrics
+    ├── run.log             # Output — structured pipeline logs
+    │
+    └── utils/
+        ├── __init__.py         # Package init + custom exceptions
+        ├── config_loader.py    # YAML config loading & path resolution
+        ├── data_loader.py      # CSV ingestion & validation
+        ├── processor.py        # Rolling mean, signal generation, metrics
+        └── logger.py           # Structured logging setup
 ```
 
 ## Features
